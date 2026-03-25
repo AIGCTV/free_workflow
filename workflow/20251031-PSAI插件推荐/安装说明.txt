@@ -1,0 +1,7 @@
+解压3e6d64e0.zip到PS安装目录
+\Program Files\Adobe\Adobe Photoshop 2025\Plug-ins\3e6d64e0
+
+本地使用插件解压Comfyui Photoshop 2.0.49.zip到comfyui安装目录
+\ComfyUI\custom_nodes
+
+根据实际情况解压到正确目录

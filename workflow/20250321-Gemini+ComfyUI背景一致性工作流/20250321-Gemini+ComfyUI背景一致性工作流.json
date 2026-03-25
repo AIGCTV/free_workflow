@@ -1,0 +1,870 @@
+{
+  "last_node_id": 75,
+  "last_link_id": 93,
+  "nodes": [
+    {
+      "id": 47,
+      "type": "LoadImage",
+      "pos": [
+        1911.32177734375,
+        942.0550537109375
+      ],
+      "size": [
+        264,
+        336
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "label": "图像",
+          "type": "IMAGE",
+          "links": [
+            67,
+            72,
+            84,
+            85
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "label": "遮罩",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.24",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "71+t+YQ5ZaL._AC_SY879_.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 68,
+      "type": "ImageResize+",
+      "pos": [
+        2497.279296875,
+        1386.6397705078125
+      ],
+      "size": [
+        315,
+        218
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 85
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 87
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 88
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            89,
+            90,
+            91
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
+        "Node name for S&R": "ImageResize+"
+      },
+      "widgets_values": [
+        512,
+        512,
+        "nearest",
+        "stretch",
+        "always",
+        0
+      ]
+    },
+    {
+      "id": 62,
+      "type": "PreviewImage",
+      "pos": [
+        2513.732177734375,
+        908.4428100585938
+      ],
+      "size": [
+        292.9345397949219,
+        401.0907897949219
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 74
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 49,
+      "type": "ShowText|pysssss",
+      "pos": [
+        2833.098876953125,
+        903.3493041992188
+      ],
+      "size": [
+        372,
+        324
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "label": "文本",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 69
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "label": "字符串",
+          "type": "STRING",
+          "shape": 6,
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "bbda5e52ad580c13ceaa53136d9c2bed9137bd2e",
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "## 处理日志\n使用用户输入的API密钥\n已保存API密钥到节点目录\n使用指定的种子值: 178470232\n使用温度值: 1.0，种子值: 178470232\n参考图像处理成功，尺寸: 661x879\n参考图像已添加到请求中\n请求Gemini API生成图像，种子值: 178470232, 包含参考图像: True\nAPI响应接收成功，正在处理...\nAPI返回数据解析处理\n图像数据类型: <class 'bytes'>, MIME类型: image/png, 数据长度: 1544837\n图像数据前8字节: 89 50 4e 47 0d 0a 1a 0a\n成功打开图像: 768x1024, 格式: PNG\n图像转换为张量成功, 形状: torch.Size([1, 1024, 768, 3])\n\n## API返回\n"
+      ]
+    },
+    {
+      "id": 69,
+      "type": "GetImageSize+",
+      "pos": [
+        2224.332275390625,
+        1399.1539306640625
+      ],
+      "size": [
+        214.20001220703125,
+        66
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 86
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            87
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            88
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
+        "Node name for S&R": "GetImageSize+"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 70,
+      "type": "PreviewImage",
+      "pos": [
+        2863.669921875,
+        1381.4693603515625
+      ],
+      "size": [
+        210,
+        246
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 90
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 59,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        3309.41455078125,
+        213.55735778808594
+      ],
+      "size": [
+        546.4925537109375,
+        579.3001098632812
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "type": "IMAGE",
+          "dir": 3,
+          "link": 71
+        },
+        {
+          "name": "image_b",
+          "type": "IMAGE",
+          "dir": 3,
+          "link": 72
+        }
+      ],
+      "outputs": [],
+      "title": "Gemini直出效果",
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "ab37a0bd377a4443d04896b34a9491ddb1cb014b",
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_njuxv_00005_.png&type=temp&subfolder=&rand=0.443735214369406"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_njuxv_00006_.png&type=temp&subfolder=&rand=0.572089071695733"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 63,
+      "type": "LayerMask: SegmentAnythingUltra V2",
+      "pos": [
+        3313.521728515625,
+        905.8978271484375
+      ],
+      "size": [
+        541.800048828125,
+        366
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 89
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            92,
+            93
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_layerstyle_advance",
+        "ver": "89aadaa6c0b8c9adfab86f5d0196f1d13383d47c",
+        "Node name for S&R": "LayerMask: SegmentAnythingUltra V2"
+      },
+      "widgets_values": [
+        "sam_vit_h (2.56GB)",
+        "GroundingDINO_SwinT_OGC (694MB)",
+        0.3,
+        "VITMatte",
+        6,
+        6,
+        0.15,
+        0.99,
+        true,
+        "dress,cloth",
+        "cuda",
+        2,
+        false
+      ],
+      "color": "rgba(27, 80, 119, 0.7)"
+    },
+    {
+      "id": 67,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        3968.998046875,
+        234.0889129638672
+      ],
+      "size": [
+        546.4925537109375,
+        579.3001098632812
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "type": "IMAGE",
+          "dir": 3,
+          "link": 83
+        },
+        {
+          "name": "image_b",
+          "type": "IMAGE",
+          "dir": 3,
+          "link": 84
+        }
+      ],
+      "outputs": [],
+      "title": "Comfyui优化效果",
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "ab37a0bd377a4443d04896b34a9491ddb1cb014b",
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_aroac_00005_.png&type=temp&subfolder=&rand=0.9047805821145272"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_aroac_00006_.png&type=temp&subfolder=&rand=0.35146122253868484"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 74,
+      "type": "Label (rgthree)",
+      "pos": [
+        2823.302978515625,
+        -352.671142578125
+      ],
+      "size": [
+        1245.64453125,
+        60
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "全网同名 AIGCTV | 让您多快好省的用上AI工具",
+      "properties": {
+        "fontSize": 60,
+        "fontFamily": "Arial",
+        "fontColor": "#ffffff",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 72,
+      "type": "Note Plus (mtb)",
+      "pos": [
+        2792.396240234375,
+        -223.2071075439453
+      ],
+      "size": [
+        1274.1002197265625,
+        248.89979553222656
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "<div class=\"hotZone\">\n  <a style=\"text-decoration: none;\" href=\"https://v.douyin.com/iSMTvGxp\">\n    <div class=\"buttonWrapper\">\n      <div class=\"customButton\">\n        <span class=\"buttonText\">🐼 抖音教程</span>\n      </div>\n    </div>\n  </a>\n  <a style=\"text-decoration: none;\" href=\"https://space.bilibili.com/3546670109296710\">\n    <div class=\"buttonWrapper\">\n      <div class=\"customButton\">\n        <span class=\"buttonText\">🐼 B站教程</span>\n      </div>\n    </div>\n  </a>\n  <a style=\"text-decoration: none;\" href=\"https://t.zsxq.com/u0BYs\">\n    <div class=\"buttonWrapper\">\n      <div class=\"customButton\">\n        <span class=\"buttonText\">🐼 知识星球</span>\n      </div>\n    </div>\n  </a>\n  \n  <a style=\"text-decoration: none;\" href=\"https://qm.qq.com/q/xW2OiqLVRu\">\n    <div class=\"buttonWrapper\">\n      <div class=\"customButton\">\n        <span class=\"buttonText\">🐼 技术交流</span>\n      </div>\n    </div>\n  </a>\n</div>\n",
+        "markdown",
+        ".hotZone {\r\n    position: absolute;\r\n    left: 400px;\r\n    top: 40px;\r\n    width: 420px;\r\n    height: 150px;\r\n    \r\n    background: transparent;\r\n    pointer-events: auto;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.buttonWrapper {\r\n    width: 280px;\r\n    height: 124px;\r\n    border-radius: 30px;\r\n    padding: 2px;\r\n    \r\n    background: linear-gradient(180deg, #DB83FD 0%, #463959 100%);\r\n    transition: transform 0.3s ease, box-shadow 0.3s ease;\r\n    overflow: visible;\r\n    position: relative;\r\n    margin:10px; /* 添加间距 */\r\n}\r\n\r\n.customButton {\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 30px;\r\n    opacity: 1;\r\n    background: linear-gradient(180deg, #22103D 0%, #0E0719 100%);\r\n    \r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    cursor: pointer;\r\n    transition: transform 0.3s ease, opacity 0.3s ease;\r\n    position: relative;\r\n    z-index: 1;\r\n}\r\n\r\n/* 悬停效果AIoldX */\r\n.buttonWrapper:hover {\r\n    transform: scale(1.05); \r\n    box-shadow: 0 0 15px 5px rgba(219, 131, 254, 0.7);\r\n}\r\n\r\n/* 悬停时字体变为白色 */\r\n.buttonWrapper:hover .buttonText {\r\n    background: none;\r\n    -webkit-background-clip: unset;\r\n    -webkit-text-fill-color: white;\r\n    color: white;\r\n}\r\n\r\n/* 点击效果AIoldX */\r\n.buttonWrapper:active {\r\n    transform: scale(0.95);\r\n    box-shadow: 0 0 10px 3px rgba(219, 131, 254, 0.9);\r\n}\r\n\r\n.buttonText {\r\n    font-size: 34px;\r\n    font-weight: bold;\r\n    font-family: Arial, sans-serif;\r\n    \r\n    background: linear-gradient(180deg, #DB83FE 7%, #834E98 97%);\r\n    -webkit-background-clip: text;\r\n    -webkit-text-fill-color: transparent;\r\n    transition: color 0.3s ease;\r\n}\r\n\r\n\r\n\r\n\r\n}",
+        "one_dark"
+      ],
+      "color": "#3a3a3a",
+      "bgcolor": "#262626",
+      "shape": 1
+    },
+    {
+      "id": 65,
+      "type": "ImageCompositeMasked",
+      "pos": [
+        3936.21337890625,
+        928.6084594726562
+      ],
+      "size": [
+        315,
+        146
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "destination",
+          "type": "IMAGE",
+          "link": 91
+        },
+        {
+          "name": "source",
+          "type": "IMAGE",
+          "link": 81
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "shape": 7,
+          "link": 92
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            82,
+            83
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "ImageCompositeMasked"
+      },
+      "widgets_values": [
+        0,
+        0,
+        false
+      ]
+    },
+    {
+      "id": 71,
+      "type": "LayerMask: MaskPreview",
+      "pos": [
+        3944.684326171875,
+        1204.06640625
+      ],
+      "size": [
+        351.9720458984375,
+        308.9913635253906
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 93
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfyui_layerstyle",
+        "ver": "4b273d4f08ea28b0743ababab70ae2e6d93be194",
+        "Node name for S&R": "LayerMask: MaskPreview"
+      },
+      "widgets_values": [],
+      "color": "rgba(27, 80, 119, 0.7)"
+    },
+    {
+      "id": 64,
+      "type": "PreviewImage",
+      "pos": [
+        4351.4541015625,
+        919.55078125
+      ],
+      "size": [
+        210,
+        246
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 82
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 57,
+      "type": "Google-Gemini",
+      "pos": [
+        2221.8955078125,
+        934.6737060546875
+      ],
+      "size": [
+        270.464599609375,
+        257
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "shape": 7,
+          "link": 67
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            71,
+            74,
+            81,
+            86
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "API Respond",
+          "type": "STRING",
+          "links": [
+            69
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "cnr_id": "gemini-api",
+        "ver": "7eee0cf03d36a581cdb987ac6cd27129763c0ee7",
+        "Node name for S&R": "Google-Gemini"
+      },
+      "widgets_values": [
+        "把图片里面女人的衣服换成咖啡色",
+        "",
+        "models/gemini-2.0-flash-exp",
+        "Free (自由比例)",
+        1,
+        178470232,
+        "randomize",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 73,
+      "type": "Label (rgthree)",
+      "pos": [
+        2342.461669921875,
+        -529.8385009765625
+      ],
+      "size": [
+        2450.7421875,
+        120
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "20250321-Gemini+ComfyUI背景一致性工作流",
+      "properties": {
+        "fontSize": 120,
+        "fontFamily": "Arial",
+        "fontColor": "#ffffff",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    }
+  ],
+  "links": [
+    [
+      67,
+      47,
+      0,
+      57,
+      0,
+      "IMAGE"
+    ],
+    [
+      69,
+      57,
+      1,
+      49,
+      0,
+      "STRING"
+    ],
+    [
+      71,
+      57,
+      0,
+      59,
+      0,
+      "IMAGE"
+    ],
+    [
+      72,
+      47,
+      0,
+      59,
+      1,
+      "IMAGE"
+    ],
+    [
+      74,
+      57,
+      0,
+      62,
+      0,
+      "IMAGE"
+    ],
+    [
+      81,
+      57,
+      0,
+      65,
+      1,
+      "IMAGE"
+    ],
+    [
+      82,
+      65,
+      0,
+      64,
+      0,
+      "IMAGE"
+    ],
+    [
+      83,
+      65,
+      0,
+      67,
+      0,
+      "IMAGE"
+    ],
+    [
+      84,
+      47,
+      0,
+      67,
+      1,
+      "IMAGE"
+    ],
+    [
+      85,
+      47,
+      0,
+      68,
+      0,
+      "IMAGE"
+    ],
+    [
+      86,
+      57,
+      0,
+      69,
+      0,
+      "IMAGE"
+    ],
+    [
+      87,
+      69,
+      0,
+      68,
+      1,
+      "INT"
+    ],
+    [
+      88,
+      69,
+      1,
+      68,
+      2,
+      "INT"
+    ],
+    [
+      89,
+      68,
+      0,
+      63,
+      0,
+      "IMAGE"
+    ],
+    [
+      90,
+      68,
+      0,
+      70,
+      0,
+      "IMAGE"
+    ],
+    [
+      91,
+      68,
+      0,
+      65,
+      0,
+      "IMAGE"
+    ],
+    [
+      92,
+      63,
+      1,
+      65,
+      2,
+      "MASK"
+    ],
+    [
+      93,
+      63,
+      1,
+      71,
+      0,
+      "MASK"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.598950000000001,
+      "offset": [
+        -1518.5012836808473,
+        1218.5663130849878
+      ]
+    },
+    "workspace_info": {
+      "id": "hEuRrom_DkiLaNlzMsgJy",
+      "saveLock": false,
+      "cloudID": null,
+      "coverMediaPath": null
+    },
+    "ue_links": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

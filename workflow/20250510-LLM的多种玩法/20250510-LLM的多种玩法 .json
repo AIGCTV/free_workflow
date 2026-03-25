@@ -1,0 +1,1268 @@
+{
+  "id": "80f06766-8d87-4cb9-a948-540dc477eb05",
+  "revision": 0,
+  "last_node_id": 21,
+  "last_link_id": 17,
+  "nodes": [
+    {
+      "id": 4,
+      "type": "LLM",
+      "pos": [
+        -41.13962173461914,
+        503.84881591796875
+      ],
+      "size": [
+        400,
+        566
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 3
+        },
+        {
+          "name": "system_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "user_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "tools",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "extra_parameters",
+          "shape": 7,
+          "type": "DICT",
+          "link": null
+        },
+        {
+          "name": "user_history",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "img_URL",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "assistant_response",
+          "type": "STRING",
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "history",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "tool",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "reasoning_content",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "2fce5476ae9fd5f94421e00592d8ee9935733e72",
+        "Node name for S&R": "LLM",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "你一个强大的人工智能助手。",
+        "你老婆和你妈同时掉水里了，你只能救一个，你会救谁？",
+        0.7,
+        "disable",
+        "disable",
+        "disable",
+        "enable",
+        1920,
+        "",
+        100,
+        "",
+        true,
+        false,
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 5,
+      "type": "ShowText|pysssss",
+      "pos": [
+        415.08282470703125,
+        506.3134765625
+      ],
+      "size": [
+        699.0065307617188,
+        457.059814453125
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "\n\n这是一个经典的伦理难题，本质上是一种假设性的极端情境，考验的并非答案本身，而是对人性、责任与情感的思考。我的思考如下：\n\n### 1. **问题的局限性**  \n这种设定剥离了现实中的复杂因素（如距离、能力、环境等），单纯要求从情感层面做取舍，本质上是一种逻辑悖论。它反映的不是选择的结果，而是人在面对不可调和的冲突时的无力感。\n\n### 2. **伦理与责任的多元性**  \n法律层面可能涉及责任义务的界定（如紧急避险原则），但更深层的是文化价值观的冲突：东方传统强调“孝道优先”，而现代家庭更注重伴侣关系的平等。这种矛盾没有绝对答案，更多取决于个体对关系的理解与情感权重。\n\n### 3. **拒绝“二选一”的陷阱**  \n现实中，人们可以通过预防措施（如教会家人游泳、共同学习急救知识）降低风险。将精力投入解决问题的可能性（“如何不让她们落水”），而非被动接受极端假设，或许是更积极的态度。\n\n### 4. **情感的本质是共情**  \n若必须直面问题，关键在于意识到：无论选择谁，另一方的失去都会带来终身遗憾。这种痛苦本身提醒我们——**爱无法被量化比较**，与其纠结于假设，不如珍惜当下的联结与关怀。\n\n最终，这个问题真正的价值在于启发我们反思：如何在日常生活中平衡不同角色的责任，并提前为所爱之人筑起安全的堤坝。"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "ShowText|pysssss",
+      "pos": [
+        414.65252685546875,
+        1289.5076904296875
+      ],
+      "size": [
+        699.0065307617188,
+        457.059814453125
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "The cat playsfully leaps from the couch, landing gracefully on the floor with a curious glance around."
+      ]
+    },
+    {
+      "id": 13,
+      "type": "Note Plus (mtb)",
+      "pos": [
+        -466.91558837890625,
+        -725.0380249023438
+      ],
+      "size": [
+        1274.1002197265625,
+        248.89979553222656
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "<div class=\"hotZone\">\n  <a href=\"https://v.douyin.com/iSMTvGxp\" style=\"text-decoration: none;\">\n    <div class=\"buttonWrapper\">\n      <div class=\"customButton\">\n        <span class=\"buttonText\">🐼 抖音教程</span>\n      </div>\n    </div>\n  </a>\n  <a href=\"https://space.bilibili.com/3546670109296710\" style=\"text-decoration: none;\">\n    <div class=\"buttonWrapper\">\n      <div class=\"customButton\">\n        <span class=\"buttonText\">🐼 B站教程</span>\n      </div>\n    </div>\n  </a>\n  <a href=\"https://t.zsxq.com/u0BYs\" style=\"text-decoration: none;\">\n    <div class=\"buttonWrapper\">\n      <div class=\"customButton\">\n        <span class=\"buttonText\">🐼 知识星球</span>\n      </div>\n    </div>\n  </a>\n  \n  <a href=\"https://qm.qq.com/q/xW2OiqLVRu\" style=\"text-decoration: none;\">\n    <div class=\"buttonWrapper\">\n      <div class=\"customButton\">\n        <span class=\"buttonText\">🐼 技术交流</span>\n      </div>\n    </div>\n  </a>\n</div>\n",
+        "markdown",
+        ".hotZone {\r\n    position: absolute;\r\n    left: 400px;\r\n    top: 40px;\r\n    width: 420px;\r\n    height: 150px;\r\n    \r\n    background: transparent;\r\n    pointer-events: auto;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.buttonWrapper {\r\n    width: 280px;\r\n    height: 124px;\r\n    border-radius: 30px;\r\n    padding: 2px;\r\n    \r\n    background: linear-gradient(180deg, #DB83FD 0%, #463959 100%);\r\n    transition: transform 0.3s ease, box-shadow 0.3s ease;\r\n    overflow: visible;\r\n    position: relative;\r\n    margin:10px; /* 添加间距 */\r\n}\r\n\r\n.customButton {\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 30px;\r\n    opacity: 1;\r\n    background: linear-gradient(180deg, #22103D 0%, #0E0719 100%);\r\n    \r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    cursor: pointer;\r\n    transition: transform 0.3s ease, opacity 0.3s ease;\r\n    position: relative;\r\n    z-index: 1;\r\n}\r\n\r\n/* 悬停效果AIoldX */\r\n.buttonWrapper:hover {\r\n    transform: scale(1.05); \r\n    box-shadow: 0 0 15px 5px rgba(219, 131, 254, 0.7);\r\n}\r\n\r\n/* 悬停时字体变为白色 */\r\n.buttonWrapper:hover .buttonText {\r\n    background: none;\r\n    -webkit-background-clip: unset;\r\n    -webkit-text-fill-color: white;\r\n    color: white;\r\n}\r\n\r\n/* 点击效果AIoldX */\r\n.buttonWrapper:active {\r\n    transform: scale(0.95);\r\n    box-shadow: 0 0 10px 3px rgba(219, 131, 254, 0.9);\r\n}\r\n\r\n.buttonText {\r\n    font-size: 34px;\r\n    font-weight: bold;\r\n    font-family: Arial, sans-serif;\r\n    \r\n    background: linear-gradient(180deg, #DB83FE 7%, #834E98 97%);\r\n    -webkit-background-clip: text;\r\n    -webkit-text-fill-color: transparent;\r\n    transition: color 0.3s ease;\r\n}\r\n\r\n\r\n\r\n\r\n}",
+        "one_dark"
+      ],
+      "color": "#3a3a3a",
+      "bgcolor": "#262626",
+      "shape": 1
+    },
+    {
+      "id": 15,
+      "type": "Label (rgthree)",
+      "pos": [
+        -442.95330810546875,
+        -813.6300659179688
+      ],
+      "size": [
+        1245.64453125,
+        60
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "全网同名 AIGCTV | 让您多快好省的用上AI工具",
+      "properties": {
+        "fontSize": 60,
+        "fontFamily": "Arial",
+        "fontColor": "#ffffff",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 14,
+      "type": "Label (rgthree)",
+      "pos": [
+        -642.9156494140625,
+        -1013.0382690429688
+      ],
+      "size": [
+        1407.3046875,
+        120
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "20250510-LLM的多种玩法",
+      "properties": {
+        "fontSize": 120,
+        "fontFamily": "Arial",
+        "fontColor": "#ffffff",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 19,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1573.3724365234375,
+        -251.84295654296875
+      ],
+      "size": [
+        230.86192321777344,
+        338.6937561035156
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "A cat and a dog are fighting."
+      ]
+    },
+    {
+      "id": 9,
+      "type": "LLM",
+      "pos": [
+        -41.569129943847656,
+        1287.04296875
+      ],
+      "size": [
+        400,
+        566
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 7
+        },
+        {
+          "name": "system_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "user_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "tools",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 10
+        },
+        {
+          "name": "extra_parameters",
+          "shape": 7,
+          "type": "DICT",
+          "link": null
+        },
+        {
+          "name": "user_history",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "img_URL",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "assistant_response",
+          "type": "STRING",
+          "links": [
+            8
+          ]
+        },
+        {
+          "name": "history",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "tool",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "reasoning_content",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "2fce5476ae9fd5f94421e00592d8ee9935733e72",
+        "Node name for S&R": "LLM",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "You are an assistant that writes short, motion-focused prompts for animating images.\nWhen the user sends an image, respond with a single, concise prompt describing visual motion (such as human activity, moving objects, or camera movements). Focus only on how the scene could come alive and become dynamic using brief phrases.\nLarger and more dynamic motions (like dancing, jumping, running, etc.) are preferred over smaller or more subtle ones (like standing still, sitting, etc.).\nDescribe subject, then motion, then other things. For example: \"The girl dances gracefully, with clear movements, full of charm.\"\nIf there is something that can dance (like a man, girl, robot, etc.), then prefer to describe it as dancing.\nStay in a loop: one image in, one motion prompt out. Do not explain, ask questions, or generate multiple options.",
+        "",
+        0.7,
+        "disable",
+        "disable",
+        "disable",
+        "enable",
+        1920,
+        "",
+        100,
+        "",
+        true,
+        false,
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 1,
+      "type": "LLM",
+      "pos": [
+        -42.36412048339844,
+        -263.3125305175781
+      ],
+      "size": [
+        400,
+        566
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 17
+        },
+        {
+          "name": "system_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "user_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "tools",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "extra_parameters",
+          "shape": 7,
+          "type": "DICT",
+          "link": null
+        },
+        {
+          "name": "user_history",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "img_URL",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "assistant_response",
+          "type": "STRING",
+          "links": [
+            2
+          ]
+        },
+        {
+          "name": "history",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "tool",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "reasoning_content",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "2fce5476ae9fd5f94421e00592d8ee9935733e72",
+        "Node name for S&R": "LLM",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "你一个强大的人工智能助手。根据我输入的内容扩写优化提示词，并翻译成英文，只要最后的结果，不要提问或者其他的内容",
+        "一只狗和猫在打架",
+        0.7,
+        "enable",
+        "disable",
+        "disable",
+        "enable",
+        1920,
+        "",
+        100,
+        "",
+        true,
+        false,
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LLM_api_loader",
+      "pos": [
+        -358.1379089355469,
+        -267.1532897949219
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "api_key"
+          },
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "CUSTOM",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "2fce5476ae9fd5f94421e00592d8ee9935733e72",
+        "Node name for S&R": "LLM_api_loader",
+        "widget_ue_connectable": {
+          "api_key": false
+        }
+      },
+      "widgets_values": [
+        "Qwen/Qwen3-8B",
+        "https://api.siliconflow.cn/v1/",
+        "",
+        false
+      ]
+    },
+    {
+      "id": 3,
+      "type": "ShowText|pysssss",
+      "pos": [
+        413.85845947265625,
+        -260.8478698730469
+      ],
+      "size": [
+        230.86192321777344,
+        338.6937561035156
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "\n\nA scruffy terrier and a sleek orange tabby cat are engaged in a fierce scuffle on a sun-dappled park bench at dusk. The dog's matted fur sticks to its damp nose from pawing at the cat's tail, while the cat's claws dig into the terrier's scruff as it attempts to bite the back of its neck. A discarded chew toy lies between them, its frayed strings tangled in the dirt. The dog's ears are pinned back in fury, its breath coming in sharp pants, while the cat's emerald eyes glow with predatory intent as it leaps over the terrier's head for a final, desperate swipe."
+      ]
+    },
+    {
+      "id": 18,
+      "type": "LLM",
+      "pos": [
+        1093.572265625,
+        -250.19384765625
+      ],
+      "size": [
+        400,
+        566
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 11
+        },
+        {
+          "name": "system_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "user_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "tools",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "extra_parameters",
+          "shape": 7,
+          "type": "DICT",
+          "link": null
+        },
+        {
+          "name": "user_history",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "img_URL",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "assistant_response",
+          "type": "STRING",
+          "links": [
+            12
+          ]
+        },
+        {
+          "name": "history",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "tool",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "reasoning_content",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "2fce5476ae9fd5f94421e00592d8ee9935733e72",
+        "Node name for S&R": "LLM",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "你是一个翻译助手，把我输入的内容翻译成英文",
+        "一只猫和狗在打架",
+        0.7,
+        "enable",
+        "disable",
+        "disable",
+        "enable",
+        1920,
+        "",
+        100,
+        "",
+        true,
+        false,
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 17,
+      "type": "LLM_api_loader",
+      "pos": [
+        738.8945922851562,
+        -236.5990447998047
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "api_key"
+          },
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "CUSTOM",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "2fce5476ae9fd5f94421e00592d8ee9935733e72",
+        "Node name for S&R": "LLM_api_loader",
+        "widget_ue_connectable": {
+          "api_key": false
+        }
+      },
+      "widgets_values": [
+        "Qwen/Qwen2.5-7B-Instruct",
+        "https://api.siliconflow.cn/v1/",
+        "",
+        false
+      ]
+    },
+    {
+      "id": 6,
+      "type": "LLM_api_loader",
+      "pos": [
+        -379.8017883300781,
+        505.33087158203125
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "api_key"
+          },
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "CUSTOM",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "2fce5476ae9fd5f94421e00592d8ee9935733e72",
+        "Node name for S&R": "LLM_api_loader",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "deepseek-ai/DeepSeek-R1",
+        "https://api.siliconflow.cn/v1/",
+        "",
+        false
+      ]
+    },
+    {
+      "id": 11,
+      "type": "LLM_api_loader",
+      "pos": [
+        -380.2312927246094,
+        1288.5250244140625
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "api_key"
+          },
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "CUSTOM",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "2fce5476ae9fd5f94421e00592d8ee9935733e72",
+        "Node name for S&R": "LLM_api_loader",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Qwen/Qwen2.5-VL-32B-Instruct",
+        "https://api.siliconflow.cn/v1/",
+        "",
+        false
+      ]
+    },
+    {
+      "id": 12,
+      "type": "LoadImage",
+      "pos": [
+        -722.8803100585938,
+        1220.270263671875
+      ],
+      "size": [
+        274.080078125,
+        314
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "1.png",
+        "image"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "easy string",
+      "pos": [
+        -899.06640625,
+        -261.56103515625
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "links": [
+            5,
+            6,
+            9,
+            13
+          ]
+        }
+      ],
+      "title": "1.填入APIKEY",
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "342ce8ccad6a1a61ccfae2ec8a6e51a9d68a5a11",
+        "Node name for S&R": "easy string",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 16,
+      "type": "Note",
+      "pos": [
+        -1280.24951171875,
+        -257.0683288574219
+      ],
+      "size": [
+        293.22705078125,
+        336.147216796875
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "注册地址：（带邀请码送14元体验券）\nhttps://cloud.siliconflow.cn/i/zdOh3t1n\n\nAPI申请地址：\nhttps://cloud.siliconflow.cn/account/ak\n\n模型地址：\nhttps://cloud.siliconflow.cn/models\n\n节点地址：\nhttps://github.com/heshengtao/Let-LLM-party\n\n操作方法：\n1.填入APIKEY\n2.选择自己需要的功能\n3.输入文字或者图片\n4.可以选择你自己需要的模型，复制到model_name"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 8,
+      "type": "Fast Groups Muter (rgthree)",
+      "pos": [
+        -894.2776489257812,
+        -105.34407043457031
+      ],
+      "size": [
+        329.8815002441406,
+        154
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "2.勾选功能菜单",
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "",
+        "showNav": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default",
+        "widget_ue_connectable": {}
+      }
+    }
+  ],
+  "links": [
+    [
+      2,
+      1,
+      0,
+      3,
+      0,
+      "STRING"
+    ],
+    [
+      3,
+      6,
+      0,
+      4,
+      0,
+      "CUSTOM"
+    ],
+    [
+      4,
+      4,
+      0,
+      5,
+      0,
+      "STRING"
+    ],
+    [
+      5,
+      7,
+      0,
+      2,
+      0,
+      "STRING"
+    ],
+    [
+      6,
+      7,
+      0,
+      6,
+      0,
+      "STRING"
+    ],
+    [
+      7,
+      11,
+      0,
+      9,
+      0,
+      "CUSTOM"
+    ],
+    [
+      8,
+      9,
+      0,
+      10,
+      0,
+      "STRING"
+    ],
+    [
+      9,
+      7,
+      0,
+      11,
+      0,
+      "STRING"
+    ],
+    [
+      10,
+      12,
+      0,
+      9,
+      5,
+      "IMAGE"
+    ],
+    [
+      11,
+      17,
+      0,
+      18,
+      0,
+      "CUSTOM"
+    ],
+    [
+      12,
+      18,
+      0,
+      19,
+      0,
+      "STRING"
+    ],
+    [
+      13,
+      7,
+      0,
+      17,
+      0,
+      "STRING"
+    ],
+    [
+      17,
+      2,
+      0,
+      1,
+      0,
+      "CUSTOM"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "QWEN3-8B 提示词优化助手",
+      "bounding": [
+        -386.73486328125,
+        -395.91827392578125,
+        1062.9119873046875,
+        720.9432373046875
+      ],
+      "color": "#3f789e",
+      "font_size": 50,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Deepseek-R1推理助手",
+      "bounding": [
+        -397.5768737792969,
+        361.1366271972656,
+        1523.39404296875,
+        724.759521484375
+      ],
+      "color": "#3f789e",
+      "font_size": 50,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "图生视频提示词助手",
+      "bounding": [
+        -394.55072021484375,
+        1165.0648193359375,
+        1512.162841796875,
+        723.8956298828125
+      ],
+      "color": "#3f789e",
+      "font_size": 50,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "QWEN2.5-7B 翻译助手",
+      "bounding": [
+        725.09326171875,
+        -381.51025390625,
+        1104.34521484375,
+        715.8689575195312
+      ],
+      "color": "#3f789e",
+      "font_size": 50,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "frontendVersion": "1.18.9",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
