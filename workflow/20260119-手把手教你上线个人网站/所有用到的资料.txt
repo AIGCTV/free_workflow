@@ -1,0 +1,23 @@
+谷歌网站制作
+https://aistudio.google.com
+
+亚马逊免费服务器
+https://aws.amazon.com/cn/
+
+谷歌搜索控制台
+https://search.google.com/search-console/welcome
+
+cloudflare CDN加速
+https://dash.cloudflare.com/
+
+网站测速
+https://www.itdog.cn/http/
+
+宝塔面板安装命令
+sudo -i
+
+curl -sSO https://download.bt.cn/install/install_panel.sh && bash install_panel.sh 12f2c1d72
+
+宝塔Linux面板安装教程 - 2025年11月24日更新 - 11.3.0 正式版
+https://www.bt.cn/bbs/thread-19376-1-1.html
+

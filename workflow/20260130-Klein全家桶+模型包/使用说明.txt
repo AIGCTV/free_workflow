@@ -1,0 +1,4 @@
+1.把models复制到comfyui目录内
+2.把comfyui-photoshop-v2.049beta4-elisezhu123.zip解压到comfyui的custom nodes 文件夹内
+3.把comfyui-photoshop-v2.049beta4-elisezhu123.zip的install plugin里面的3e6d64e0文件夹复制到PS的plugins文件夹内
+4.把工作流丢进comfyui打开的页面内，保存按F5刷新页面，PS里面的功能菜单就可以正常出现了
