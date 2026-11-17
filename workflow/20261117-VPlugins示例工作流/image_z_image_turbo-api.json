@@ -1,0 +1,203 @@
+{
+  "62": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "63": {
+    "inputs": {
+      "vae_name": "ae.sft"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "64": {
+    "inputs": {
+      "conditioning": [
+        "67",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "Conditioning Zero Out"
+    }
+  },
+  "65": {
+    "inputs": {
+      "samples": [
+        "70",
+        0
+      ],
+      "vae": [
+        "63",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "66": {
+    "inputs": {
+      "unet_name": "Z_image\\z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "67": {
+    "inputs": {
+      "text": [
+        "73",
+        0
+      ],
+      "clip": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "68": {
+    "inputs": {
+      "width": [
+        "72",
+        3
+      ],
+      "height": [
+        "72",
+        4
+      ],
+      "batch_size": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "69": {
+    "inputs": {
+      "shift": 3,
+      "model": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "70": {
+    "inputs": {
+      "seed": [
+        "74",
+        0
+      ],
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "res_multistep",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "69",
+        0
+      ],
+      "positive": [
+        "67",
+        0
+      ],
+      "negative": [
+        "64",
+        0
+      ],
+      "latent_image": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "72": {
+    "inputs": {
+      "slot": "main",
+      "required": true,
+      "file_name": "",
+      "selection_file": "",
+      "request_id": ""
+    },
+    "class_type": "VP_Image",
+    "_meta": {
+      "title": "PS Images"
+    }
+  },
+  "73": {
+    "inputs": {
+      "text": "把季节变成夏天，女人的相貌不变，身上的服装和帽子也换成夏天的装扮",
+      "param_id": "prompt",
+      "label": "Prompt",
+      "source_json": "{\"kind\":\"canonical\",\"key\":\"prompt\"}"
+    },
+    "class_type": "VP_Prompt",
+    "_meta": {
+      "title": "PS Prompt"
+    }
+  },
+  "74": {
+    "inputs": {
+      "param_id": "seed",
+      "label": "Seed",
+      "value": 42,
+      "mode": "random"
+    },
+    "class_type": "VP_Seed",
+    "_meta": {
+      "title": "PS Seed"
+    }
+  },
+  "75": {
+    "inputs": {
+      "result_id": "result",
+      "filename_prefix": "VPlugins",
+      "request_id": "",
+      "images": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "VP_SendToPS",
+    "_meta": {
+      "title": "Send to PS"
+    }
+  },
+  "76": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "VP_Batch",
+    "_meta": {
+      "title": "PS Batch"
+    }
+  }
+}

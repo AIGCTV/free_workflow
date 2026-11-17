@@ -1,0 +1,265 @@
+{
+  "508": {
+    "inputs": {
+      "unet_name": "qwen\\qwen_image_2.1_turbo_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "509": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "510": {
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "511": {
+    "inputs": {
+      "width": [
+        "531",
+        3
+      ],
+      "height": [
+        "531",
+        4
+      ],
+      "batch_size": [
+        "536",
+        0
+      ]
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "512": {
+    "inputs": {
+      "samples": [
+        "525",
+        0
+      ],
+      "vae": [
+        "510",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "513": {
+    "inputs": {
+      "switch": true,
+      "on_false": [
+        "515",
+        2
+      ],
+      "on_true": [
+        "511",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "If/Else Switch"
+    }
+  },
+  "514": {
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "508",
+        0
+      ]
+    },
+    "class_type": "QwenImage21Cache",
+    "_meta": {
+      "title": "Qwen Image 2.1 Cache"
+    }
+  },
+  "515": {
+    "inputs": {
+      "prompt": [
+        "539",
+        0
+      ],
+      "negative_prompt": "",
+      "resolution": 0,
+      "clip": [
+        "509",
+        0
+      ],
+      "images.image_1": [
+        "531",
+        0
+      ],
+      "vae": [
+        "510",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImage21",
+    "_meta": {
+      "title": "Text Encode Qwen Image 2.1"
+    }
+  },
+  "522": {
+    "inputs": {
+      "sigmas": "1.0, 0.978453, 0.95418, 0.926626, 0.89508, 0.845148, 0.704534, 0.414568, 0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "Manual Sigmas (Qwen-Image-2.1-Turbo 8-step schedule)"
+    }
+  },
+  "523": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSampler Select (euler)"
+    }
+  },
+  "524": {
+    "inputs": {
+      "noise_seed": [
+        "538",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "Random Noise"
+    }
+  },
+  "525": {
+    "inputs": {
+      "noise": [
+        "524",
+        0
+      ],
+      "guider": [
+        "526",
+        0
+      ],
+      "sampler": [
+        "523",
+        0
+      ],
+      "sigmas": [
+        "522",
+        0
+      ],
+      "latent_image": [
+        "513",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "Sampler Custom Advanced"
+    }
+  },
+  "526": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "514",
+        0
+      ],
+      "positive": [
+        "515",
+        0
+      ],
+      "negative": [
+        "515",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG Guider"
+    }
+  },
+  "531": {
+    "inputs": {
+      "slot": "main",
+      "required": true,
+      "file_name": "",
+      "selection_file": "",
+      "request_id": ""
+    },
+    "class_type": "VP_Image",
+    "_meta": {
+      "title": "PS Images"
+    }
+  },
+  "536": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "VP_Batch",
+    "_meta": {
+      "title": "PS Batch"
+    }
+  },
+  "537": {
+    "inputs": {
+      "result_id": "result",
+      "filename_prefix": "VPlugins",
+      "request_id": "",
+      "images": [
+        "512",
+        0
+      ]
+    },
+    "class_type": "VP_SendToPS",
+    "_meta": {
+      "title": "Send to PS"
+    }
+  },
+  "538": {
+    "inputs": {
+      "param_id": "seed",
+      "label": "Seed",
+      "value": 190002069719961,
+      "mode": "random"
+    },
+    "class_type": "VP_Seed",
+    "_meta": {
+      "title": "PS Seed"
+    }
+  },
+  "539": {
+    "inputs": {
+      "text": "",
+      "param_id": "prompt",
+      "label": "Prompt",
+      "source_json": "{\"kind\":\"canonical\",\"key\":\"prompt\"}"
+    },
+    "class_type": "VP_Prompt",
+    "_meta": {
+      "title": "PS Prompt"
+    }
+  }
+}

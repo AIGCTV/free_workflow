@@ -1,0 +1,320 @@
+{
+  "131": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "132": {
+    "inputs": {
+      "steps": 20,
+      "width": [
+        "144",
+        0
+      ],
+      "height": [
+        "144",
+        1
+      ]
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler"
+    }
+  },
+  "133": {
+    "inputs": {
+      "cfg": 5,
+      "model": [
+        "137",
+        0
+      ],
+      "positive": [
+        "147",
+        0
+      ],
+      "negative": [
+        "145",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG Guider"
+    }
+  },
+  "134": {
+    "inputs": {
+      "noise": [
+        "136",
+        0
+      ],
+      "guider": [
+        "133",
+        0
+      ],
+      "sampler": [
+        "131",
+        0
+      ],
+      "sigmas": [
+        "132",
+        0
+      ],
+      "latent_image": [
+        "142",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "135": {
+    "inputs": {
+      "samples": [
+        "134",
+        0
+      ],
+      "vae": [
+        "141",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "136": {
+    "inputs": {
+      "noise_seed": [
+        "171",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "137": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "138": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "139": {
+    "inputs": {
+      "text": [
+        "172",
+        0
+      ],
+      "clip": [
+        "138",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "140": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "138",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "141": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "142": {
+    "inputs": {
+      "width": [
+        "144",
+        0
+      ],
+      "height": [
+        "144",
+        1
+      ],
+      "batch_size": [
+        "173",
+        0
+      ]
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "143": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1,
+      "resolution_steps": 1,
+      "image": [
+        "169",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "Scale Image to Total Pixels"
+    }
+  },
+  "144": {
+    "inputs": {
+      "image": [
+        "143",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "145": {
+    "inputs": {
+      "conditioning": [
+        "140",
+        0
+      ],
+      "latent": [
+        "146",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent"
+    }
+  },
+  "146": {
+    "inputs": {
+      "pixels": [
+        "143",
+        0
+      ],
+      "vae": [
+        "141",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "147": {
+    "inputs": {
+      "conditioning": [
+        "139",
+        0
+      ],
+      "latent": [
+        "146",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent"
+    }
+  },
+  "169": {
+    "inputs": {
+      "slot": "main",
+      "required": true,
+      "file_name": "",
+      "selection_file": "",
+      "request_id": ""
+    },
+    "class_type": "VP_Image",
+    "_meta": {
+      "title": "PS Images"
+    }
+  },
+  "170": {
+    "inputs": {
+      "result_id": "result",
+      "filename_prefix": "VPlugins",
+      "request_id": "",
+      "images": [
+        "135",
+        0
+      ]
+    },
+    "class_type": "VP_SendToPS",
+    "_meta": {
+      "title": "Send to PS"
+    }
+  },
+  "171": {
+    "inputs": {
+      "param_id": "seed",
+      "label": "Seed",
+      "value": 42,
+      "mode": "random"
+    },
+    "class_type": "VP_Seed",
+    "_meta": {
+      "title": "PS Seed"
+    }
+  },
+  "172": {
+    "inputs": {
+      "text": "把季节变成夏天，保持人物相貌和姿势不变，让头上的帽子和身上的衣服都换成夏天的装扮",
+      "param_id": "prompt",
+      "label": "Prompt",
+      "source_json": "{\"kind\":\"canonical\",\"key\":\"prompt\"}"
+    },
+    "class_type": "VP_Prompt",
+    "_meta": {
+      "title": "PS Prompt"
+    }
+  },
+  "173": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "VP_Batch",
+    "_meta": {
+      "title": "PS Batch"
+    }
+  }
+}
